@@ -19,19 +19,35 @@
       <span>MindLabz</span>
     </div>
 
-    <ul>
-      <li>
-        <a class="btn btn-solid" target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">
-          Hire Us
-        </a>
-      </li>
-      <li><a href="#games">Games</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <!-- Mobile toggle -->
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <!-- three lines -->
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-right">
+      <ul class="nav-list">
+        <li><a class="btn btn-solid" target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">Hire Us</a></li>
+        <li><a href="#games">Games</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
   </div>
 </nav>
+
+<script>
+  // simple toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const navRight = document.querySelector('.nav-right');
+  toggle.addEventListener('click', () => {
+    navRight.classList.toggle('open');
+    toggle.classList.toggle('open');
+  });
+</script>
+
 
 
   <section class="hero" id="top">
