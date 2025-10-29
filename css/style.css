@@ -94,63 +94,56 @@ nav a:hover{color:var(--accent)}
   transform:rotate(-45deg) translate(4px, -4px);
 }
 
-/* Responsive behavior */
-@media (max-width: 820px){
-  .brand span{display:none;}
-  .menu-toggle{display:flex;}
+@media (max-width: 820px) {
+  .brand span { display: none; }
+  .menu-toggle { display: flex; }
 
-  .nav-inner{justify-content:space-between;}
+  .nav-inner { justify-content: space-between; }
 
-  .nav-right{
-    position:fixed;
-    top:60px;
-    left:16px;
-    right:16px;
-    background:var(--panel);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:12px;
-    padding:12px;
-    display:none;
-    flex-direction:column;
-    gap:12px;
+  .nav-right {
+    position: fixed;
+    top: 60px;
+    left: 16px;
+    right: 16px;
+    background: var(--panel);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;   /* ✅ stack items vertically */
+    align-items: stretch;     /* ✅ full width buttons/links */
+    gap: 12px;
   }
-  .nav-right.open{display:flex;}
 
-  .nav-right .btn-solid{
-    width:100%;
-    text-align:center;
-    padding:12px 16px;
+  .nav-right.open { display: flex; }
+
+  .nav-right .btn-solid {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
   }
 
   nav ul {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 18px;
-    list-style: none;
-    padding: 0;
+    flex-direction: column;   /* ✅ make nav links vertical */
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
     margin: 0;
+    padding: 0;
   }
 
-  nav ul li {
-    display: flex;
-    align-items: center;
+  nav ul a {
+    width: 100%;
+    padding: 10px 8px;
+    border-radius: 10px;
   }
 
-  nav ul li:first-child .btn {
-    margin-right: 6px; /* small spacing between Hire Us and Games */
-    padding: 8px 16px;
-    font-size: 14px;
-    line-height: 1;
+  nav ul a:hover {
+    background: rgba(255,255,255,.04);
   }
-
-  nav ul a{
-    width:100%;
-    padding:10px 8px;
-    border-radius:10px;
-  }
-  nav ul a:hover{background:rgba(255,255,255,.04);}
 }
+
 
 /* Hero */
 section.hero{
