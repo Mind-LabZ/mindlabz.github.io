@@ -92,3 +92,9 @@ footer .row{display:flex; justify-content:space-between; gap:20px; flex-wrap:wra
   .grid-3, .grid-2{grid-template-columns:1fr}
   .hero h1{font-size:38px}
 }
+@media (max-width: 640px){
+  nav ul{gap:12px; flex-wrap:wrap}
+  .cta-nav{display:none;}        /* hide the big CTA in nav */
+  .brand span{display:none;}     /* saves space by hiding the "MindLabz" text, logo stays */
+  .btn{padding:8px 12px; font-size:14px; line-height:1.1}
+}
