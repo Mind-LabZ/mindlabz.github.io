@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECO/SYSTEM – Publisher Preview</title>
+  <meta name="description" content="ECO:SYSTEM is a mobile strategy game about building an ecosystem under pressure. Publisher preview page." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f0e0c;
+      --panel: #221a11;
+      --panel2: #2b2116;
+      --border: #3b2f1d;
+      --gold: #c9a35d;
+      --text: #efe9dd;
+      --muted: #b9ae9b;
+      --good: #5aa05a;
+      --warn: #f0c05a;
+      --bad: #c76a5b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(1200px 600px at 50% -10%, #1f1b14 0%, #0f0e0c 60%, #090908 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 28px 16px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: 100%;
+      max-width: 1080px;
+      background: linear-gradient(180deg, #17130e 0%, #0f0d0a 100%);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.65);
+    }
+
+    header {
+      padding: 40px 28px 24px;
+      text-align: center;
+      background: linear-gradient(180deg, #221b13 0%, #18130e 100%);
+      border-bottom: 1px solid #2b2216;
+    }
+
+    .logo {
+      font-family: Cinzel, serif;
+      font-size: 52px;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin: 0 0 10px;
+    }
+
+    .tagline {
+      margin: 0 auto;
+      max-width: 820px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .pillrow {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #3a2c1d;
+      background: #14110d;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 22px 28px 34px;
+      background: linear-gradient(180deg, #16120d 0%, #100d0a 100%);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--panel2) 0%, var(--panel) 100%);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px;
+    }
+
+    .card h2 {
+      font-family: Cinzel, serif;
+      letter-spacing: 0.08em;
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: var(--gold);
+    }
+
+    .card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .video {
+      width: 100%;
+      background: #000;
+      border-radius: 12px;
+      border: 1px solid #3a2c1d;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video iframe { width: 100%; height: 100%; border: 0; }
+
+    .cta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border: 1px solid transparent;
+      text-decoration: none;
+      transition: transform 0.1s ease, background 0.15s ease, border 0.15s ease;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #d2b06a 0%, #b48a42 100%);
+      color: #1b140b;
+      border-color: #e0c17a;
+    }
+
+    .btn-secondary {
+      background: #15120e;
+      color: var(--text);
+      border-color: #3a2c1d;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); }
+
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .kpi .box {
+      border: 1px solid #3a2c1d;
+      border-radius: 10px;
+      padding: 10px 10px;
+      background: #14110d;
+    }
+
+    .kpi .label {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .kpi .value {
+      font-size: 14px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .list {
+      margin: 10px 0 0;
+      padding-left: 16px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .list li { margin: 6px 0; }
+
+    .good { color: var(--good); font-weight: 600; }
+    .warn { color: var(--warn); font-weight: 600; }
+    .bad  { color: var(--bad);  font-weight: 600; }
+
+    .section {
+      padding: 0 28px 28px;
+      background: linear-gradient(180deg, #100d0a 0%, #0d0b09 100%);
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    footer {
+      padding: 18px 22px;
+      text-align: center;
+      font-size: 12px;
+      color: #7d715f;
+      border-top: 1px solid #2b2216;
+      background: #0b0907;
+    }
+
+    @media (max-width: 920px) {
+      .grid { grid-template-columns: 1fr; }
+      .two { grid-template-columns: 1fr; }
+      .logo { font-size: 44px; }
+      header { padding: 34px 18px 20px; }
+      .hero, .section { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1 class="logo">ECO / SYSTEM</h1>
+      <p class="tagline">
+        A mobile, grid-based strategy game where players build a thriving land under pressure.
+        Each year begins with a world event that reshapes the map, then players spend energy to adapt.
+        The year ends with a readable report: what changed, why it changed, and what breaks next if you ignore it.
+      </p>
+      <div class="pillrow">
+        <span class="pill">Platform: iOS / Android</span>
+        <span class="pill">Genre: Strategy / Management</span>
+        <span class="pill">Controls: Tap</span>
+        <span class="pill">Status: Prototype</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="grid">
+        <div class="card">
+          <h2>Trailer / Gameplay</h2>
+          <div class="video">
+            <!-- Replace VIDEO_ID with your YouTube video id -->
+            <iframe src="https://youtube.com/shorts/Tq4AITXTg_I?feature=share" title="ECO:SYSTEM Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">REQUEST BUILD</a>
+            <a class="btn btn-secondary" href="#contact">CONTACT</a>
+            <a class="btn btn-secondary" href="#" onclick="alert('Add a press kit link when ready.'); return false;">PRESS KIT</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>One‑Sentence Hook</h2>
+          <p>
+            <b>ECO / SYSTEM</b> is a fast, readable strategy game where <b>your ability to act</b> is something you build —
+            and every upgrade changes the ecosystem in ways you must manage.
+          </p>
+
+          <h2>Core Loop</h2>
+          <ul class="list">
+            <li><b>Start of year:</b> a world event alters the grid (growth, drought, blight, flood, etc.).</li>
+            <li><b>Player phase:</b> spend energy on contextual actions per tile (build, upgrade, purify, spread water).</li>
+            <li><b>End of year:</b> a report shows energy production/spend and resource shifts.</li>
+            <li><b>Win condition:</b> survive and expand through escalating events; avoid collapse thresholds.</li>
+          </ul>
+
+          <div class="kpi">
+            <div class="box">
+              <div class="label">Readability</div>
+              <div class="value">Clear cause → effect feedback</div>
+            </div>
+            <div class="box">
+              <div class="label">Depth</div>
+              <div class="value">Trade‑offs, adjacency, events</div>
+            </div>
+            <div class="box">
+              <div class="label">Retention</div>
+              <div class="value">Short sessions, “one more year”</div>
+            </div>
+            <div class="box">
+              <div class="label">Scalability</div>
+              <div class="value">Easy to add tiles/events</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="two">
+        <div class="card">
+          <h2>What Makes It Publishable</h2>
+          <ul class="list">
+            <li><span class="good">Strong onboarding:</span> Year 1 doubles as a narrative tutorial.</li>
+            <li><span class="good">High clarity:</span> end‑of‑year report explains resource movement and drivers.</li>
+            <li><span class="good">Mobile‑native interaction:</span> tap tile → actions appear; no heavy menus.</li>
+            <li><span class="warn">Expandable content:</span> events + tiles are data‑driven; rapid iteration.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Systems (Prototype Scope)</h2>
+          <ul class="list">
+            <li><b>Resources:</b> Nature, Crops, Crystals (avoid too low/high), Pollution (must stay below 100).</li>
+            <li><b>Energy economy:</b> produced by infrastructure each year; energy is your action budget.</li>
+            <li><b>Tiles:</b> forest, farm, water, industry, solar, empty, blight/depleted states.</li>
+            <li><b>Events:</b> drought/flood/blight/boom growth that modify tiles at start of year.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two" id="contact">
+        <div class="card">
+          <h2>Contact</h2>
+          <p>
+            For a build, KPI test plan, or publishing discussion:
+          </p>
+          <p>
+            <b>Email:</b> <a href="mailto:contact@mindlabz.studio">contact@mindlabz.studio</a><br/>
+            <b>Studio:</b> MindLabZ (Yerevan)
+          </p>
+          <p>
+            If you’d like, we can provide a short test package: a 3–5 minute session, tutorial year,
+            and 5–10 world events to evaluate retention and clarity.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="mailto:contact@mindlabz.studio?subject=ECO%2FSYSTEM%20-%20Build%20Request">REQUEST BUILD</a>
+            <a class="btn btn-secondary" href="mailto:contact@mindlabz.studio?subject=ECO%2FSYSTEM%20-%20Publishing%20Inquiry">PUBLISHING INQUIRY</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Comparable Feel</h2>
+          <p>
+            Easy to learn, hard to balance. Players see immediate tile-level feedback, with strategic consequences
+            on a yearly cadence.
+          </p>
+          <ul class="list">
+            <li><b>Reigns‑style readability</b> (clear consequences), without the card UI.</li>
+            <li><b>Grid management</b> with adjacency and controlled expansion.</li>
+            <li><b>Short sessions</b> designed for mobile retention.</li>
+          </ul>
+          <p style="margin-top: 12px;">
+            <span class="warn">Replace this section</span> with your preferred comps once you finalize the pitch.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 • ECO / SYSTEM • Publisher preview
+    </footer>
+  </main>
+</body>
+</html>
