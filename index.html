@@ -1,181 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MindLabz — Game Studio</title>
-  <meta name="description" content="MindLabz — Unity game studio building mobile & WebGL games. Smart, stylish, addictive gameplay with strong performance.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MindLabz | Mobile game studio in Yerevan</title>
+  <meta name="description" content="MindLabz is a game studio in Yerevan, Armenia. We publish our own mobile puzzle and action games, and we can build yours, from the first prototype to launch.">
+  <meta name="theme-color" content="#16132B">
+  <link rel="canonical" href="https://mindlabz.studio/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MindLabz">
+  <meta property="og:title" content="MindLabz | Mobile game studio in Yerevan">
+  <meta property="og:description" content="We design and ship mobile games. Eight titles live on Google Play, and we can build yours, from the first prototype to launch.">
+  <meta property="og:url" content="https://mindlabz.studio/">
+  <meta property="og:image" content="https://mindlabz.studio/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MindLabz",
+    "legalName": "MIND LABZ, LLC",
+    "url": "https://mindlabz.studio/",
+    "logo": "https://mindlabz.studio/assets/logo.png",
+    "email": "info@mindlabz.studio",
+    "address": { "@type": "PostalAddress", "addressLocality": "Yerevan", "addressCountry": "AM" },
+    "sameAs": [
+      "https://play.google.com/store/apps/developer?id=MindLabZ",
+      "https://www.upwork.com/agencies/1938572074650867340/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<nav>
+<a class="skip" href="#games">Skip to our games</a>
+
+<nav class="nav" id="nav" aria-label="Main">
   <div class="container nav-inner">
-    <div class="brand">
-      <img src="assets/logo.png" alt="MindLabz logo"/>
+    <a class="brand" href="#top" aria-label="MindLabz home">
+      <img src="assets/logo-160.png" alt="" width="36" height="36">
       <span>MindLabz</span>
-    </div>
-
-    <!-- Mobile toggle -->
-    <button class="menu-toggle" aria-label="Toggle menu">
-      <!-- three lines -->
-      <span></span><span></span><span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+      <span class="visually-hidden">Menu</span>
+      <span class="bar"></span><span class="bar"></span>
     </button>
-
-    <div class="nav-right">
-      <ul class="nav-list">
-        <li><a class="btn btn-solid" target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">Hire Us</a></li>
+    <div class="nav-menu" id="nav-menu">
+      <ul>
         <li><a href="#games">Games</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#studio">Studio</a></li>
       </ul>
-
+      <a class="btn btn-signal btn-sm" href="#contact">Start a project</a>
     </div>
   </div>
 </nav>
 
-<script>
-  // simple toggle
-  const toggle = document.querySelector('.menu-toggle');
-  const navRight = document.querySelector('.nav-right');
-  toggle.addEventListener('click', () => {
-    navRight.classList.toggle('open');
-    toggle.classList.toggle('open');
-  });
-</script>
+<header class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <h1>We design and ship mobile games.</h1>
+      <p class="hero-lead">MindLabz is a game studio in Yerevan, Armenia. We publish our own puzzle and action games, and we can build yours too, from the first prototype to launch day.</p>
+      <div class="actions">
+        <a class="btn btn-signal" href="#contact">Start a project</a>
+        <a class="btn btn-ghost" href="#games">See our games</a>
+      </div>
 
+      <div class="dock">
+        <p class="dock-label">Live on Google Play</p>
+        <ul class="dock-icons">
+          <li><a href="#haul-rush" title="Haul Rush"><img src="assets/games/haulrush/icon.webp" alt="Haul Rush" width="56" height="56"></a></li>
+          <li><a href="#gumball-jar" title="Gumball Jar"><img src="assets/games/gumballjar/icon.webp" alt="Gumball Jar" width="56" height="56"></a></li>
+          <li><a href="#arrow-twist" title="Arrow Twist"><img src="assets/games/arrowtwist/icon.webp" alt="Arrow Twist" width="56" height="56"></a></li>
+          <li><a href="#pull-tower" title="Pull Tower"><img src="assets/games/pulltower/icon.webp" alt="Pull Tower" width="56" height="56"></a></li>
+          <li><a href="#dye-drop" title="Dye Drop"><img src="assets/games/dyedrop/icon.webp" alt="Dye Drop" width="56" height="56"></a></li>
+          <li><a href="#boomtown" title="Boomtown"><img src="assets/games/boomtown/icon.webp" alt="Boomtown" width="56" height="56"></a></li>
+          <li><a href="#convoy-blast" title="Convoy Blast!"><img src="assets/games/convoyblast/icon.webp" alt="Convoy Blast!" width="56" height="56"></a></li>
+          <li><a href="#shape-wars" title="Shape Wars: Reloaded"><img src="assets/games/shapewars/icon.webp" alt="Shape Wars: Reloaded" width="56" height="56"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <div class="reel" aria-hidden="true">
+    <div class="reel-tilt">
+      <div class="reel-col">
+        <div class="reel-track">
+          <img src="assets/games/haulrush/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/gumballjar/s3.webp" alt="" width="540" height="960">
+          <img src="assets/games/arrowtwist/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/pulltower/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/dyedrop/s4.webp" alt="" width="540" height="960">
+          <img src="assets/games/haulrush/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/gumballjar/s3.webp" alt="" width="540" height="960">
+          <img src="assets/games/arrowtwist/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/pulltower/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/dyedrop/s4.webp" alt="" width="540" height="960">
+        </div>
+      </div>
+      <div class="reel-col reel-col--down">
+        <div class="reel-track">
+          <img src="assets/games/boomtown/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/convoyblast/s3.webp" alt="" width="540" height="960">
+          <img src="assets/games/shapewars/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/gumballjar/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/haulrush/s4.webp" alt="" width="540" height="960">
+          <img src="assets/games/boomtown/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/convoyblast/s3.webp" alt="" width="540" height="960">
+          <img src="assets/games/shapewars/s2.webp" alt="" width="540" height="960">
+          <img src="assets/games/gumballjar/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/haulrush/s4.webp" alt="" width="540" height="960">
+        </div>
+      </div>
+      <div class="reel-col">
+        <div class="reel-track">
+          <img src="assets/games/dyedrop/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/arrowtwist/s4.webp" alt="" width="540" height="960">
+          <img src="assets/games/pulltower/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/convoyblast/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/boomtown/s4.webp" alt="" width="540" height="960">
+          <img src="assets/games/dyedrop/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/arrowtwist/s4.webp" alt="" width="540" height="960">
+          <img src="assets/games/pulltower/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/convoyblast/s1.webp" alt="" width="540" height="960">
+          <img src="assets/games/boomtown/s4.webp" alt="" width="540" height="960">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-  <section class="hero" id="top">
-    <div class="container grid">
+<main>
+
+<section class="games" id="games" aria-labelledby="games-title">
+  <div class="games-intro" data-bg="#16132B">
+    <div class="container games-intro-inner">
+      <h2 id="games-title">Our games</h2>
+      <p>Eight titles live on Google Play, each one designed, drawn and built in-house.</p>
+    </div>
+  </div>
+
+  <!-- Haul Rush -->
+  <article class="game" id="haul-rush" data-bg="#8B3F1B" style="--bg:#8B3F1B; --fg:#FFFFFF; --accent:#FFC857;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/haulrush/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Truck shooter</p>
+        </div>
+        <h3 class="game-title">Haul Rush</h3>
+        <p class="game-pitch">Hitch guns to your truck, steer through gates and blast raider hordes all the way to the boss at the end of the road.</p>
+        <ul class="game-facts">
+          <li>12 weapons to hitch</li>
+          <li>4 regions, 40 stops</li>
+          <li>5 unlockable rigs</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.mindlabz.haulrush" target="_blank" rel="noopener">Get Haul Rush on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/haulrush/s4.webp" alt="Haul Rush: building a war train of up to 6 trailers" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/haulrush/s5.webp" alt="Haul Rush: a road boss fight" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/haulrush/s1.webp" alt="Haul Rush: one truck against an endless raider horde" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Gumball Jar -->
+  <article class="game" id="gumball-jar" data-bg="#C2216B" style="--bg:#C2216B; --fg:#FFFFFF; --accent:#FFE27A;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/gumballjar/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Spin and pop puzzle</p>
+        </div>
+        <h3 class="game-title">Gumball Jar</h3>
+        <p class="game-pitch">Spin the jar so the gumballs tumble into new groups, then pop the chains to make rockets, bombs and rainbows.</p>
+        <ul class="game-facts">
+          <li>Hundreds of levels</li>
+          <li>Teddies to rescue</li>
+          <li>Plays offline</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.mindlabz.gumballjar" target="_blank" rel="noopener">Get Gumball Jar on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/gumballjar/s2.webp" alt="Gumball Jar: popping a huge combo" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/gumballjar/s3.webp" alt="Gumball Jar: rescuing teddies from capsules" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/gumballjar/s1.webp" alt="Gumball Jar: spinning the jar" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Arrow Twist -->
+  <article class="game" id="arrow-twist" data-bg="#2449C9" style="--bg:#2449C9; --fg:#FFFFFF; --accent:#FFB347;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/arrowtwist/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Path puzzle</p>
+        </div>
+        <h3 class="game-title">Arrow Twist</h3>
+        <p class="game-pitch">Twist tiles to connect each arrow's trail, then launch every arrow off the board in the right order.</p>
+        <ul class="game-facts">
+          <li>200 levels</li>
+          <li>7 chapters with bosses</li>
+          <li>A new daily puzzle</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.mindlabz.arrowtwist" target="_blank" rel="noopener">Get Arrow Twist on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/arrowtwist/s2.webp" alt="Arrow Twist: turning tiles to light the trail" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/arrowtwist/s4.webp" alt="Arrow Twist: the chapter map" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/arrowtwist/s1.webp" alt="Arrow Twist: twist, connect, launch" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Pull Tower -->
+  <article class="game game--light" id="pull-tower" data-bg="#F7C6D9" style="--bg:#F7C6D9; --fg:#2A1430; --accent:#2A1430;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/pulltower/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Wafer block puzzle</p>
+        </div>
+        <h3 class="game-title">Pull Tower</h3>
+        <p class="game-pitch">Pull wafer blocks out of the tower, collect three of a color to clear them, and don't let it fall.</p>
+        <ul class="game-facts">
+          <li>300 levels</li>
+          <li>A boss tower every 10 levels</li>
+          <li>No timer</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.mindlabz.pulltower" target="_blank" rel="noopener">Get Pull Tower on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/pulltower/s2.webp" alt="Pull Tower: matching three colors" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/pulltower/s5.webp" alt="Pull Tower: a boss tower" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/pulltower/s1.webp" alt="Pull Tower: pulling a block without the tower falling" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Dye Drop -->
+  <article class="game" id="dye-drop" data-bg="#222867" style="--bg:#222867; --fg:#FFFFFF; --accent:#FF7BA9;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/dyedrop/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Color puzzle</p>
+        </div>
+        <h3 class="game-title">Dye Drop</h3>
+        <p class="game-pitch">Tap a patch and the dye spreads to every piece of the same color. Plan your bottles and turn each outfit one color.</p>
+        <ul class="game-facts">
+          <li>6 chapters</li>
+          <li>9 kinds of garment</li>
+          <li>Boss outfits</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.mindlabz.dyedrop" target="_blank" rel="noopener">Get Dye Drop on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/dyedrop/s2.webp" alt="Dye Drop: planning the bottles for a dress" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/dyedrop/s3.webp" alt="Dye Drop: a finished tie-dye dress" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/dyedrop/s1.webp" alt="Dye Drop: dye spreading through a shirt" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Boomtown -->
+  <article class="game" id="boomtown" data-bg="#0E6E9E" style="--bg:#0E6E9E; --fg:#FFFFFF; --accent:#FFD54A;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/boomtown/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Dice tycoon</p>
+        </div>
+        <h3 class="game-title">Boomtown</h3>
+        <p class="game-pitch">Roll the dice to move around the island, collect coins and materials, and build it up into a booming town.</p>
+        <ul class="game-facts">
+          <li>5 islands to sail to</li>
+          <li>5 landmarks on each</li>
+          <li>Bonus mini-games</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.boomtown.dicetycoon" target="_blank" rel="noopener">Get Boomtown on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/boomtown/s2.webp" alt="Boomtown: the island map" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/boomtown/s3.webp" alt="Boomtown: raising a landmark" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/boomtown/s1.webp" alt="Boomtown: rolling the dice on the island board" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Convoy Blast -->
+  <article class="game" id="convoy-blast" data-bg="#3A2B98" style="--bg:#3A2B98; --fg:#FFFFFF; --accent:#FF6FAE;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/convoyblast/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Convoy puzzle</p>
+        </div>
+        <h3 class="game-title">Convoy Blast!</h3>
+        <p class="game-pitch">Send trucks onto the loop to fire at cubes of their own color, and break the pixel invader before it reaches the road.</p>
+        <ul class="game-facts">
+          <li>200 levels and an endless highway</li>
+          <li>40 pixel invaders to collect</li>
+          <li>Giant bosses</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.convoy.blast" target="_blank" rel="noopener">Get Convoy Blast! on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/convoyblast/s2.webp" alt="Convoy Blast!: same-color trucks zip into a convoy" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/convoyblast/s5.webp" alt="Convoy Blast!: a giant boss" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/convoyblast/s1.webp" alt="Convoy Blast!: chaining pops on a pixel invader" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <!-- Shape Wars -->
+  <article class="game" id="shape-wars" data-bg="#0B1133" style="--bg:#0B1133; --fg:#FFFFFF; --accent:#4D9BFF;">
+    <div class="container game-inner">
+      <div class="game-copy">
+        <div class="game-head">
+          <img class="game-icon" src="assets/games/shapewars/icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="game-genre">Strategy</p>
+        </div>
+        <h3 class="game-title">Shape Wars <span>Reloaded</span></h3>
+        <p class="game-pitch">A neon strategy game. Connect and upgrade your bases, then send your shapes out to capture enemy territory.</p>
+        <ul class="game-facts">
+          <li>Base upgrades</li>
+          <li>Territory battles</li>
+          <li>Neon geometric look</li>
+        </ul>
+        <a class="btn btn-store" href="https://play.google.com/store/apps/details?id=com.MINDLabZ.ShapeWarsReloaded" target="_blank" rel="noopener">Get Shape Wars on Google Play</a>
+      </div>
+      <div class="game-phones">
+        <figure class="phone phone--l"><img src="assets/games/shapewars/s3.webp" alt="Shape Wars: connected bases on a hex map" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--r"><img src="assets/games/shapewars/s5.webp" alt="Shape Wars: attacking an enemy base" width="540" height="960" loading="lazy"></figure>
+        <figure class="phone phone--front"><img src="assets/games/shapewars/s1.webp" alt="Shape Wars: sending shapes to capture territory" width="540" height="960" loading="lazy"></figure>
+      </div>
+    </div>
+  </article>
+
+  <div class="games-outro" data-bg="#0B1133">
+    <div class="container">
+      <a class="btn btn-ghost" href="https://play.google.com/store/apps/developer?id=MindLabZ" target="_blank" rel="noopener">See all our games on Google Play</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="services-head">
+      <h2 id="services-title">Work with us</h2>
       <div>
-        <div class="logo">
-          <img src='assets/logo.png' alt='MindLabz logo' style='width:86px;height:86px;border-radius:999px;'/>
-        </div>
-        <h1>Smart. Stylish. Addictive — we build games that stick.</h1>
-        <p class="lead">MindLabz is a Yerevan-based studio crafting <strong>mobile</strong> and <strong>WebGL</strong> games in Unity. We blend clean design, tight code, and player‑first systems to create titles that people come back to.</p>
-        <div class="actions">
-          <a class="btn btn-solid" href="#games">View our work</a>
-          <a class="btn" target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">Talk to us on Upwork</a>
-        </div>
+        <p>Bring us an idea or a game that's already in progress. We can build the whole thing, prototype it for your next publisher test, or join your team when it needs extra hands.</p>
+        <a class="btn btn-ink" href="#contact">Start a project</a>
       </div>
-      <div>
-        <div class="panel">
-          <h3 style="margin-top:0">Highlights</h3>
-          <p class="section-sub">Unity experts with 8+ years of experience shipping polished mobile titles and browser experiences.</p>
-          <span class="badge">Unity</span>
-          <span class="badge">Mobile</span>
-          <span class="badge">WebGL</span>
-          <span class="badge">C#</span>
-          <span class="badge">UI/UX</span>
-          <span class="badge">Optimization</span>
+    </div>
+
+    <ul class="service-list">
+      <li>
+        <h3>Full game development</h3>
+        <p>Your game from design and art to engineering and release, made by one team that owns all of it.</p>
+      </li>
+      <li>
+        <h3>Prototypes and publisher tests</h3>
+        <p>A playable prototype of your idea in days, then a test build with SDKs and analytics wired in, ready for your publisher's CPI test.</p>
+      </li>
+      <li>
+        <h3>Game art and UI</h3>
+        <p>2D and 3D art, UI, icons and effects in a style that fits your game and reads well on a small screen.</p>
+      </li>
+      <li>
+        <h3>Ad creatives and store pages</h3>
+        <p>Video ads built around a three-second hook, plus the screenshots, feature graphic and copy for your store page.</p>
+      </li>
+      <li>
+        <h3>Monetization and live ops</h3>
+        <p>Rewarded ads, mediation, in-app purchases, consent and analytics, plus the updates that keep your players coming back.</p>
+      </li>
+      <li>
+        <h3>Co-development</h3>
+        <p>We join your team for a feature, a port, or performance work on a game that's already in production.</p>
+      </li>
+    </ul>
+
+    <div class="process">
+      <h3 class="process-title">How a project runs</h3>
+      <ol class="steps">
+        <li>
+          <h4>Concept</h4>
+          <p>We shape your idea, or pitch you ours, and write a design doc everyone builds from.</p>
+        </li>
+        <li>
+          <h4>Prototype</h4>
+          <p>A playable build in days, so you judge the core loop by playing it.</p>
+        </li>
+        <li>
+          <h4>Production</h4>
+          <p>Engineering, art, levels, onboarding and sound, with regular builds you can play.</p>
+        </li>
+        <li>
+          <h4>Launch</h4>
+          <p>Store page, ad creatives and test campaigns, then release on Google Play and the App Store.</p>
+        </li>
+        <li>
+          <h4>Live ops</h4>
+          <p>Updates, events and tuning based on what your players actually do.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="studio" id="studio" aria-labelledby="studio-title">
+  <div class="container studio-inner">
+    <h2 id="studio-title">A game studio in Yerevan</h2>
+    <div class="studio-body">
+      <p>MindLabz is a game studio of senior designers, artists and engineers. The people who pitch a game are the same people who build it, test it and put it on the store, so nothing gets lost between departments.</p>
+      <dl class="studio-facts">
+        <div><dt>Genres</dt><dd>Puzzle, casual, action and strategy</dd></div>
+        <div><dt>Platforms</dt><dd>Android, iOS and WebGL</dd></div>
+        <div><dt>Experience</dt><dd>8+ years shipping games</dd></div>
+        <div><dt>Live games</dt><dd>8 on Google Play</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="contact-panel">
+      <div class="contact-copy">
+        <h2 id="contact-title">Have a game in mind?</h2>
+        <p>Tell us what you're making and where you'd like help. We'll get back to you with questions, a plan and a quote.</p>
+      </div>
+      <div class="contact-actions">
+        <div class="contact-buttons">
+          <a class="btn btn-signal" href="mailto:info@mindlabz.studio"><span class="hide-sm">Email</span>info@mindlabz.studio</a>
+          <a class="btn btn-ghost" href="https://www.upwork.com/agencies/1938572074650867340/" target="_blank" rel="noopener">Hire us on Upwork</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="games">
-    <div class="container">
-      <h2 class="section-title">Our Games</h2>
-      <p class="section-sub">A mix of roguelite and casual gameplay — fast to pick up, satisfying to master.</p>
+</main>
 
-      <div class="grid-3">
-        <div class="card">
-          <div class="thumb">Shape Wars — Trailer / Screens</div>
-          <h3>Shape Wars</h3>
-          <p>Arcade action with clean visuals and crunchy feedback. Built for short sessions and high replayability.</p>
-        </div>
-        <div class="card">
-          <div class="thumb">Downright Dungeon — WIP</div>
-          <h3>Downright Dungeon</h3>
-          <p>Mobile-friendly twist on tactical roguelites. Snappy runs, meaningful upgrades, and accessible depth.</p>
-        </div>
-        <div class="card">
-          <div class="thumb">WebGL Showcase</div>
-          <h3>WebGL Showcase</h3>
-          <p>Lightweight, interactive browser builds for pitches, marketing, and playtests — optimized for fast load.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer class="footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <img src="assets/logo-160.png" alt="" width="32" height="32" loading="lazy">
+      <span>MindLabz</span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="https://play.google.com/store/apps/developer?id=MindLabZ" target="_blank" rel="noopener">Google Play</a></li>
+      <li><a href="https://www.upwork.com/agencies/1938572074650867340/" target="_blank" rel="noopener">Upwork</a></li>
+      <li><a href="mailto:info@mindlabz.studio">Email</a></li>
+    </ul>
+    <p class="footer-legal">&copy; <span id="year">2026</span> MIND LABZ, LLC. Yerevan, Armenia.</p>
+  </div>
+</footer>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="section-sub">End‑to‑end Unity development for mobile and web.</p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Full‑Cycle Development</h3>
-          <p>Concept → prototype → production → launch. We ship clean builds and smooth onboarding.</p>
-        </div>
-        <div class="card">
-          <h3>Casual & Roguelite</h3>
-          <p>Accessible loops with depth. Procedural systems, meta progression, and retention‑driven design.</p>
-        </div>
-        <div class="card">
-          <h3>WebGL Experiences</h3>
-          <p>Playable demos, browser games, and marketing builds — optimized for load time and compatibility.</p>
-        </div>
-        <div class="card">
-          <h3>Art & UI/UX</h3>
-          <p>Stylized 2D/3D visuals, clean interfaces, and clear feedback — built for touch and readability.</p>
-        </div>
-        <div class="card">
-          <h3>Optimization</h3>
-          <p>Memory & CPU profiling, asset pipelines, Addressables, and device performance tuning.</p>
-        </div>
-        <div class="card">
-          <h3>Live‑Ops & QA</h3>
-          <p>Analytics hooks, A/B tests, balancing and economy tuning, and release QA across devices.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About MindLabz</h2>
-      <p class="section-sub">Based in Yerevan, Armenia.</p>
-      <div class="grid-2">
-        <div class="card">
-          <p>We’re a tight, veteran‑level team focused on building games that feel great from the first tap. Our specialty spans casual and roguelite systems, responsive controls, and production‑ready code. We keep scope realistic, polish high, and communication crisp.</p>
-        </div>
-        <div class="card">
-          <p>Need a prototype, a vertical slice, or a full launch? We can own the entire pipeline or integrate with your team — from design and art to engineering, optimization, and live‑ops.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-sub">Let’s build something players will remember.</p>
-      <div class="grid-2">
-        <div class="card">
-          <p>Email: <a href="mailto:info@mindlabz.studio">info@mindlabz.studio</a></p>
-          <p>Upwork: <a target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">MindLabz Agency</a></p>
-        </div>
-        <div class="card">
-          <p>Want a simple contact form? Plug this page into <a target="_blank" href="https://formspree.io/">Formspree</a> and point submissions to your email — no backend needed.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container row">
-      <div>© 2025 MindLabz Studio</div>
-      <div class="social">
-        <a target="_blank" href="https://www.upwork.com/agencies/1938572074650867340/">Upwork</a>
-        <a href="mailto:info@mindlabz.studio">Email</a>
-      </div>
-    </div>
-  </footer>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>
